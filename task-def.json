@@ -1,6 +1,6 @@
 {
   "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::543617408880:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::119377870131:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
@@ -9,7 +9,7 @@
         "secretOptions": null,
         "options": {
           "awslogs-group": "/ecs/xgboost-task-def",
-          "awslogs-region": "us-east-1",
+          "awslogs-region": "eu-west-1",
           "awslogs-stream-prefix": "ecs"
         }
       },
@@ -30,7 +30,7 @@
       "memoryReservation": 1000,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "543617408880.dkr.ecr.us-east-1.amazonaws.com/xgboost-container",
+      "image": "119377870131.dkr.ecr.eu-west-1.amazonaws.com/xgboost-container",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -52,12 +52,12 @@
   ],
   "placementConstraints": [],
   "memory": "1024",
-  "taskRoleArn": "arn:aws:iam::543617408880:role/ecsTaskExecutionRole",
+  "taskRoleArn": null,
   "compatibilities": [
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:543617408880:task-definition/xgboost-task-def:1",
+  "taskDefinitionArn": "arn:aws:ecs:eu-west-1:119377870131:task-definition/xgboost-task-def:1",
   "family": "xgboost-task-def",
   "requiresAttributes": [
     {
@@ -89,12 +89,6 @@
       "targetType": null,
       "value": null,
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
     },
     {
       "targetId": null,
